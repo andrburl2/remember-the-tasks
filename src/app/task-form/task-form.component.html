@@ -1,0 +1,46 @@
+<div class="task-form">
+  <mat-card class="task-form__container">
+    <mat-card-header class="task-form__header">
+      <mat-card-title class="task-form__title">Новая задача</mat-card-title>
+      <mat-divider inset></mat-divider>
+    </mat-card-header>
+
+    <form class="task-form__content" [formGroup]="taskForm" (submit)="submitForm()">
+        <p class="task-form__error">
+          {{ isControlInvalid('text') }}
+        </p>
+        <input class="task-form__input" formControlName="text" placeholder="Название задачи...">
+
+        <mat-form-field class="task-form__select" appearance="fill">
+          <mat-label>Категория</mat-label>
+          <mat-select formControlName="project_id">
+            <mat-option value="0">Новая категория</mat-option>
+            <mat-option
+              *ngFor="let project of projects"
+              [value]="project.id"
+            >
+              {{ project.title }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <p class="task-form__error" *ngIf="showInput">
+          {{ isControlInvalid('project_title') }}
+        </p>
+        <input class="task-form__input" *ngIf="showInput" formControlName="project_title" placeholder="Название категории...">
+
+      <div class="task-form__button-container">
+        <button class="task-form__button task-form__button_color_grey" type="button" (click)="toggleForm()">Отмена</button>
+        <button
+          class="task-form__button task-form__button_color_blue"
+          [ngClass]="{ 'task-form__button_disabled': taskForm.invalid == true }"
+          type="submit"
+          [disabled]='taskForm.invalid'
+        >
+          ок
+        </button>
+      </div>
+
+    </form>
+  </mat-card>
+</div>

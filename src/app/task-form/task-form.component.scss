@@ -1,0 +1,122 @@
+@import '../../styles.scss';
+
+.task-form {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.task-form__container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.task-form__header {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 0;
+  flex-direction: column;
+}
+
+.task-form__title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.task-form__content {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-form__input {
+  height: 50px;
+  margin: 0 0 20px;
+  padding: 0 10px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-form__input:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+.task-form__error {
+  padding: 0 0 0 10px;
+  margin: 0 0 10px;
+  color: red;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.task-form__error:last-of-type {
+  margin: 0;
+  transform: translateY(-10px);
+}
+
+.task-form__button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.task-form__button {
+  width: calc(50% - 15px);
+  height: 50px;
+  margin: 0 30px 0 0;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.task-form__button:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+.task-form__button_color_grey {
+  background-color: grey;
+}
+
+.task-form__button_color_blue {
+  background-color: $primary-color;
+}
+
+.task-form__button_disabled {
+  background-color: #fff;
+  color: #404040;
+  border: 2px solid #404040;
+  cursor: default;
+}
+
+.task-form__button:last-of-type {
+  margin: 0;
+}
+
+// Стили для select формы
+.task-form__select ::ng-deep .mat-form-field-flex {
+  height: 50px;
+  padding: 5px 10px 0;
+  border: 1px solid grey;
+  border-radius: 0;
+  background-color: #fff;
+}
