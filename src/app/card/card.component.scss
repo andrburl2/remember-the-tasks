@@ -1,0 +1,78 @@
+@import '../../styles.scss';
+
+.card {
+  width: 100%;
+  padding: 0;
+  border-radius: 0;
+}
+
+.card__header {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 0;
+  flex-direction: column;
+}
+
+.card__title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.card__body {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__text {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.card__checkbox {
+  margin: 0 0 25px;
+  cursor: default;
+
+  ::ng-deep .mat-checkbox-layout {
+    align-items: center;
+    cursor: pointer;
+  }
+
+  ::ng-deep .mat-checkbox-inner-container {
+    width: 25px;
+    height: 25px;
+    margin: 0 20px 0 0;
+  }
+
+  ::ng-deep .mat-checkbox-inner-container {
+    width: 25px;
+    height: 25px;
+    margin: 0 20px 0 0;
+  }
+
+  ::ng-deep .mat-checkbox-label {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 500px) {
+    ::ng-deep .mat-checkbox-label {
+      font-size: 14px;
+      white-space: normal;
+    }
+  }
+}
+
+// Стили для checkbox
+::ng-deep .mat-checkbox-ripple .mat-ripple-element {
+  background-color: $primary-color !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: $primary-color;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-label {
+  text-decoration: line-through;
+}
