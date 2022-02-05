@@ -1,7 +1,17 @@
 # RememberTheTasks
 
-Тестовое задание для вакансии full-stack-developer OBLAKOGROUP.
+Проект написан на **Angular** с использование Angular Material. Сайт размещен на heroku и работает с API. Реализованы требуемые функции:
+* получает с сервера задачи и выводит их, сортирую по категориям;
+* с помощью формы можно добавить новые задача в имеющуюся категорию и создать новую;
+* форма создана с помощью Angular Forms и валидируется;
+* у задач переключается checkbox выполнения.
 
-## Ссылка на сайт на Heroku
+## Ссылки:
+* [API](https://sleepy-eyrie-08069.herokuapp.com/projects)
+* [Сайт на heroku](https://remember-the-tasks.herokuapp.com)
 
-**https://remember-the-tasks.herokuapp.com**
+## Использование:
+
+Сначала откройте **API**, затем **сайта на heroku**.
+
+Проект написан, как тестовое задание для вакансии **FULL STACK DEVELOPER** в компании **ОБЛАКО ГРУП**.
