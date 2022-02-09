@@ -17,5 +17,3 @@ app.use(express.static('dist/remember-the-tasks'));
 app.get('/*', function(req, res) {
   res.sendFile('index.html', { root: 'dist/remember-the-tasks' });
 });
-
-
