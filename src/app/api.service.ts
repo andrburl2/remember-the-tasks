@@ -13,7 +13,7 @@ interface NewTodo {
 export class ApiService {
   constructor(private http: HttpClient) { }
 
-  url='https://sleepy-eyrie-08069.herokuapp.com';
+  url='https://remember-the-tasks-api.herokuapp.com';
 
   getProjects() {
     return this.http.get(`${this.url}/projects`)
